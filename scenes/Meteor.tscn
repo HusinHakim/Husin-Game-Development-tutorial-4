@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cs8h0xraahho1"]
+
+[ext_resource type="Script" uid="uid://2xnxygnnymft" path="res://meteor.gd" id="1_d7is7"]
+[ext_resource type="Texture2D" uid="uid://c4jibqosedk24" path="res://assets/kenney_platformerpack/chrome_2026-03-06_03.38.24-removebg-preview.png" id="2_yahek"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_64tc3"]
+radius = 48.0
+height = 96.0
+
+[node name="Meteor" type="Area2D" unique_id=16447533]
+script = ExtResource("1_d7is7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=291472133]
+position = Vector2(34.624996, -56.500004)
+scale = Vector2(0.4076674, 0.41001856)
+texture = ExtResource("2_yahek")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1359957736]
+shape = SubResource("CapsuleShape2D_64tc3")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1064367495]
+emitting = false
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 0.01
+initial_velocity_max = 200.0

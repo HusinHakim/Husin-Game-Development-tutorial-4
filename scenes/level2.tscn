@@ -1,0 +1,119 @@
+[gd_scene format=4 uid="uid://doctu3eq76373"]
+
+[ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1_xa7n4"]
+[ext_resource type="Script" uid="uid://leqy6slqnort" path="res://scenes/camera_2d.gd" id="2_bo4dx"]
+[ext_resource type="Texture2D" uid="uid://chgqimvh7rdh6" path="res://assets/Familiar Looking Rocket.png" id="3_76toy"]
+[ext_resource type="PackedScene" uid="uid://b10mmmhe5eca5" path="res://scenes/AreaTrigger.tscn" id="4_8g4ke"]
+[ext_resource type="Script" uid="uid://dxifclh4cry8k" path="res://scenes/rocketlvl2.gd" id="4_bo4dx"]
+[ext_resource type="Script" uid="uid://dbsqqdb8sc62u" path="res://scenes/jurang.gd" id="5_56gwk"]
+[ext_resource type="Script" uid="uid://dxwcpfdj4kdml" path="res://scenes/spawnerlvl2.gd" id="6_hrcei"]
+[ext_resource type="Texture2D" uid="uid://cluh2ekc38ktx" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_dirt.png" id="8_wvb8j"]
+[ext_resource type="PackedScene" path="res://scenes/Meteor.tscn" id="9_g8vcy"]
+[ext_resource type="PackedScene" uid="uid://dlm2mrajsbpj8" path="res://scenes/JembatanPalsu.tscn" id="9_xa7n4"]
+[ext_resource type="Script" uid="uid://bm4rfm2jkrx0n" path="res://scenes/spawner.gd" id="11_8g4ke"]
+[ext_resource type="PackedScene" uid="uid://d27su6hc23q08" path="res://scenes/FallingSlime.tscn" id="12_8g4ke"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76388"]
+size = Vector2(1899, 55)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y0kc7"]
+texture = ExtResource("8_wvb8j")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 4, 64, 64, 17, 56, -34, 42, -64, 1)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 4, 41, 35, -6, 54, -64, 64)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 4, 64, 64, 27, 39, -17, 9, -64, -21)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, -18, 19, 7, -14, 33, -64, 64)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 64, 18, 64, -8, 64, -64, 64)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 64, 18, 64, -8, 64, -64, 64)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 7, -64, 13)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 7, -64, 13)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 7, -64, 13)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 64, 18, 64, -8, 64, -64, 64)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -28, -28, 22, 21, 64, 64, -64, 64, -64, 64)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, 64, -3, 1, 64, -64, 64, 64, -64, 64, -64, 64)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 64, 18, 64, -8, 64, -64, 64)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 64, 18, 64, -8, 64, -64, 64)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 64, 64, 18, 64, -8, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_ne2mo"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_y0kc7")
+
+[node name="Level2" type="Node2D" unique_id=993297332]
+
+[node name="Player" parent="." unique_id=746276092 groups=["player"] instance=ExtResource("1_xa7n4")]
+position = Vector2(45, 24)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1824967839]
+script = ExtResource("2_bo4dx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=105091090]
+position = Vector2(783.9999, -31)
+scale = Vector2(0.2994187, 0.39819586)
+texture = ExtResource("3_76toy")
+
+[node name="Area2D" parent="Sprite2D" unique_id=458582439 instance=ExtResource("4_8g4ke")]
+script = ExtResource("4_bo4dx")
+
+[node name="CollisionShape2D" parent="Sprite2D/Area2D" index="0" unique_id=1373101595]
+position = Vector2(0.0009765625, 124.310684)
+scale = Vector2(1.0000001, 1)
+
+[node name="Jurang" type="Area2D" parent="." unique_id=182528305]
+script = ExtResource("5_56gwk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jurang" unique_id=2050415827]
+position = Vector2(655.5, 684)
+shape = SubResource("RectangleShape2D_76388")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=363814226]
+position = Vector2(672, -338)
+script = ExtResource("6_hrcei")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1238644144]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAD//wEAAAAGAAEAAAAAAAEAAAAHAAEAAAABAAEAAAAHAAEAAAACAAEAAAAHAAEAAAAJAAIAAAAFAAEAAAAKAAEAAAAFAAEAAAAKAAMAAAABAAAAAAAJAAMAAAABAAAAAAAKAAIAAAAIAAAAAAAEAAQAAAABAAEAAAAHAAMAAAAAAAEAAAAFAAQAAAADAAEAAAAAAAIAAAABAAAAAAABAAIAAAABAAAAAAACAAIAAAABAAAAAAABAAMAAAABAAAAAAAKAAQAAAABAAAAAAALAAIAAAABAAAAAAALAAMAAAABAAAAAAALAAQAAAABAAAAAAAMAAQAAAABAAAAAAAMAAMAAAABAAAAAAAMAAIAAAABAAAAAAALAAEAAAAHAAEAAAAMAAEAAAAIAAEAAAALAAUAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_ne2mo")
+
+[node name="JembatanPalsu" parent="." unique_id=1860055232 instance=ExtResource("9_xa7n4")]
+position = Vector2(223, 96)
+
+[node name="SerpihanTanah" parent="JembatanPalsu" index="2" unique_id=1755211942]
+position = Vector2(34, 0)
+
+[node name="Meteor" parent="." unique_id=16447533 instance=ExtResource("9_g8vcy")]
+position = Vector2(671, -340)
+
+[node name="Spawner2" type="Node2D" parent="." unique_id=763616360]
+position = Vector2(231, -313)
+script = ExtResource("11_8g4ke")
+obstacle = ExtResource("12_8g4ke")
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Jurang" to="Jurang" method="_on_body_entered"]
+
+[editable path="Player"]
+[editable path="Sprite2D/Area2D"]
+[editable path="JembatanPalsu"]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d27su6hc23q08"]
+
+[ext_resource type="Texture2D" uid="uid://daqqxs1h08i3x" path="res://assets/kenney_platformerpack/PNG/Enemies/slimePurple.png" id="1_fgboo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghnyv"]
+size = Vector2(72, 57)
+
+[node name="FallingSlime" type="RigidBody2D" unique_id=326257270]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=84465762]
+texture = ExtResource("1_fgboo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1540351132]
+position = Vector2(0, 34)
+shape = SubResource("RectangleShape2D_ghnyv")

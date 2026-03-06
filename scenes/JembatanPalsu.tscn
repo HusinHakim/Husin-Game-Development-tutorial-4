@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dlm2mrajsbpj8"]
+
+[ext_resource type="Texture2D" uid="uid://bnkr636v7qxgi" path="res://assets/kenney_platformerpack/PNG/Ground/Dirt/dirt.png" id="1_aqfvi"]
+[ext_resource type="Script" uid="uid://b0s0gftodh1nx" path="res://scenes/jembatan_palsu.gd" id="1_ymngg"]
+[ext_resource type="Texture2D" uid="uid://ip3k1jki8mvd" path="res://assets/kenney_platformerpack/chrome_2026-03-06_05.57.20-removebg-preview.png" id="2_hfqmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_src3y"]
+size = Vector2(127, 64)
+
+[node name="JembatanPalsu" type="StaticBody2D" unique_id=1860055232 groups=["bisa_hancur"]]
+position = Vector2(-31, 0)
+script = ExtResource("1_ymngg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1669147210]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_aqfvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1124713134]
+position = Vector2(31.5, 0)
+shape = SubResource("RectangleShape2D_src3y")
+
+[node name="SerpihanTanah" type="CPUParticles2D" parent="." unique_id=1755211942 groups=["bisa_hancur"]]
+position = Vector2(1, 0)
+emitting = false
+amount = 20
+texture = ExtResource("2_hfqmi")
+lifetime = 1.17
+one_shot = true
+explosiveness = 0.82
+emission_shape = 3
+emission_rect_extents = Vector2(20, 10)
+spread = 180.0
+initial_velocity_min = 41.67
+initial_velocity_max = 88.96
+scale_amount_min = 0.05
+scale_amount_max = 0.2
+
+[node name="SerpihanTanah2" type="CPUParticles2D" parent="." unique_id=1609240769 groups=["bisa_hancur"]]
+position = Vector2(55, 0)
+emitting = false
+amount = 20
+texture = ExtResource("2_hfqmi")
+lifetime = 1.17
+one_shot = true
+explosiveness = 0.82
+emission_shape = 3
+emission_rect_extents = Vector2(20, 10)
+spread = 180.0
+initial_velocity_min = 41.67
+initial_velocity_max = 88.96
+scale_amount_min = 0.05
+scale_amount_max = 0.2
